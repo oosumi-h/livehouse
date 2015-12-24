@@ -20,7 +20,7 @@ try {
 	die("エラー：".$e->getMessage());
 }
 
-	//
+//ライブハウス検索
 try {
 	$sql = "select * from livehouse where address like :area";
 	$stmh = $pdo->prepare($sql);
@@ -55,7 +55,7 @@ try {
 		};
 		map = new google.maps.Map(document.getElementById("map"), opts);
 
-		//緯度・経度ではなく、指定した住所で表示
+//緯度・経度ではなく、指定した住所で表示
 		geo = new google.maps.Geocoder();
 		var add = document.getElementById('add');//変数addにid="add"の要素ノードオブジェクト格納
 		var req = {
@@ -68,6 +68,7 @@ try {
 			return;
 		}
 
+//マーカーにカーソルを乗せた時の吹き出し表示の為の処理
 		var clone = document.getElementById('house_name');//変数cloneにid="house_name"の要素ノードオブジェクト格納
 		var name = clone.cloneNode(true);//変数cloneを複製し、変数nameに格納
 		var latlng = result[0].geometry.location;
