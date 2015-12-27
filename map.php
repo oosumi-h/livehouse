@@ -6,7 +6,7 @@ require_once ("test.php");
 $pdo = db_connect();
 // GETで地区名取得、中間一致検索を行う為の処理を変数に格納
 $area = '%'.$_GET['area'].'%';
-// $area = '%'.$_POST['area'].'%';
+//$area = '%'.$_POST['area'].'%';
 
 //地区名検索
 try {
@@ -86,6 +86,12 @@ try {
       google.maps.event.addListener(marker, 'mouseout', function(){
       	infowin.close();
       });
+
+      //マーカーにリンク追加
+      var hp = document.getElementById('hp');
+      google.maps.event.addListener(marker, 'click', function(){
+      window.open(hp);
+    });
   };
 };
 </script>
@@ -114,11 +120,13 @@ try {
 			<br>
 			<?php while ($row = $stmh->fetch(PDO::FETCH_ASSOC)) {
 				$house_name = ($row['name']);
-				$address = ($row['address']); 
+				$address = ($row['address']);
+				$hp = ($row['hp']);  
 				?>
 				<form name="live" id="live" method="post" action="detail.php">
 					<input type="hidden" name="id" value="<?php echo $row['id']; ?>">
 					<input type="hidden" id="add" value="<?php echo $address; ?>">
+					<a id="hp" href="<?php echo $hp; ?>"></a>
 					<input class="id" type="submit" id="house_name" name="house_name" value="<?php echo $house_name; ?>">
 				</form>
 				<?php } ?>
