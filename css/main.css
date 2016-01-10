@@ -1,5 +1,6 @@
 @charset 'utf-8';
 
+/*共通部分css*/
 body	{
 	margin: 0px;
 }
@@ -12,6 +13,15 @@ header	{
 	color: white;
 	background-color: black;
 	font-family: 'Noto Sans Japanese';
+}
+
+footer	{
+	color: white;
+	background-color: black;
+	font-family: 'Noto Sans Japanese';
+	width: 100%;
+	height: 35px;
+	text-align: center;
 }
 
 .logo	{
@@ -29,13 +39,17 @@ header	{
 	right: 10px;
 }
 
-.radios 	{
+.radio 	{
 	font-size: 12px;
 	margin-top: -10px;
 	margin-bottom: -25px;
 }
 
 .main	{
+
+	color: white;
+	text-align: center;
+	font-family: 'Noto Sans Japanese';
 	background-image: url(../images/live.jpg);
 	background-size: cover;
 }
@@ -63,11 +77,92 @@ header	{
 	top: 5px;
 }
 
-footer	{
-	color: white;
-	background-color: black;
-	font-family: 'Noto Sans Japanese';
-	width: 100%;
-	height: 35px;
-	text-align: center;
+
+/*TOP画面css*/
+.map	{
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
 }
+
+area:focus {
+	outline: none;
+}
+
+
+/*地図詳細画面css*/
+.scr	{
+	overflow: scroll;
+	width: 500px;
+	height: 371px;
+	display: block;
+	margin-bottom: 7px;
+	margin-right: auto;
+	margin-left:  auto;
+	background-color: white;
+	border-style: solid;
+	opacity: 0.9;
+}
+
+.id 	{
+	margin-bottom: 10px;
+	font-size: 17px;
+	font-family: 'Noto Sans Japanese';
+	border-style: none;
+	background-color: transparent;
+	transition: 0.3s ease-in-out;
+}
+
+.id:hover	{
+	color: red;
+	background-color: pink;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.id:active	{
+	background-color: transparent;
+}
+
+.id:focus	{
+	outline: none;
+}
+
+#map 	{ 
+	display: inline-block;
+	height: 350px;
+	width: 500px;
+}
+
+/*詳細画面css*/
+.name 	{
+	font-family: 'Noto Sans Japanese';
+	font-size: 30px;
+	border-bottom: solid pink 5px;
+	padding: 0px 3%;
+}
+
+p {
+	border-bottom: solid black;
+}
+
+table 	{
+	color: black;
+	background-color: white;
+	margin-right: auto;
+	margin-left: auto;
+	border-style: solid;
+	opacity: 0.9;
+}
+
+td 	{
+	padding: 80px;
+	font-family: 'Noto Sans Japanese';
+}
+
+.hp	{
+	transition: 0.3s ease-in-out;
+}
+
+
+

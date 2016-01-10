@@ -14,7 +14,7 @@
 			<img class="logo" src="images/live2.png" height="100" width="100">
 			<div class="src">
 				<form method="post" action="search.php">
-					<div class="radios">
+					<div class="radio">
 						<input type="radio" name="search" value="hausename" checked="checked">ライブハウス
 						<input type="radio" name="search" value="place">場所
 					</div>
@@ -61,7 +61,7 @@
 			<br>
 		</div>	
 		<footer>
-			Copyright(C) 20xx. OH. All right.	
+			(C) 20xx. OH. All right.	
 		</footer>
 	</div>
 

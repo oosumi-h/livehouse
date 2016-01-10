@@ -2,7 +2,7 @@
 
 <?php 
 
-require_once ("test.php");
+require_once ("db.php");
 
 $pdo = db_connect();
 
@@ -23,7 +23,7 @@ $pdo = db_connect();
 			<img class="logo" src="images/live.png" height="100" width="100">
 			<div class="src">
 				<form method="post" action="search.php">
-					<div class="radios">
+					<div class="radio">
 						<input type="radio" name="search" value="hausename" checked="checked">ライブハウス
 						<input type="radio" name="search" value="place">場所
 					</div>
@@ -87,6 +87,8 @@ $pdo = db_connect();
 			<a class="btn" href="index.php"><span class="hp">TOP</span></a>
 		</div>	
 		<footer>
-			Copyright(C) 20xx. OH. All right.	
+			(C) 20xx. OH. All right.	
 		</footer>
 	</div>
+</body>
+</html>

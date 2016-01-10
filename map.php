@@ -1,6 +1,6 @@
 <?php 
 
-require_once ("test.php");
+require_once ("db.php");
 
 //DB接続
 $pdo = db_connect();
@@ -101,7 +101,7 @@ try {
 		<img class="logo" src="images/live.png">
 		<div class="src">
 			<form method="post" action="search.php">
-				<div class="radios">
+				<div class="radio">
 					<input type="radio" name="search" value="hausename" checked="checked">ライブハウス
 					<input type="radio" name="search" value="place">場所
 				</div>
@@ -133,7 +133,7 @@ try {
 				<br>
 			</div>
 			<footer>
-				Copyright(C) 20xx. OH. All right.	
+				(C) 20xx. OH. All right.	
 			</footer>
 		</div>
 	</body>
